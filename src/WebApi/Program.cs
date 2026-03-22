@@ -10,8 +10,7 @@ builder.Services.AddCors(o => o.AddPolicy("bad", p => p.AllowAnyOrigin().AllowAn
 
 var app = builder.Build();
 
-BadDb.ConnectionString = app.Configuration["ConnectionStrings:Sql"]
-    ?? "Server=localhost;Database=master;User Id=sa;Password=SuperSecret123!;TrustServerCertificate=True";
+BadDb.Initialize();
 
 app.UseCors("bad");
 

@@ -1,9 +1,10 @@
 using System.Threading;
 using System;
-namespace Application.UseCases;
-
 using Domain.Entities;
 using Domain.Services;
+
+
+namespace Application.UseCases;
 
 public class CreateOrderUseCase
 {
@@ -12,3 +13,4 @@ public class CreateOrderUseCase
         return OrderService.CreateTerribleOrder(customer, product, qty, price);
     }
 }
+

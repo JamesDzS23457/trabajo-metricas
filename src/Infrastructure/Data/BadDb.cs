@@ -1,31 +1,47 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.Sqlite;
 
 namespace Infrastructure.Data;
 
-using System.Data;
-using System.Data.SqlClient;
 
 public static class BadDb
 {
-    public static string ConnectionString =
-        "Server=localhost;Database=master;User Id=sa;Password=SuperSecret123!;TrustServerCertificate=True";
+    public static string ConnectionString = "Data Source=Tienda.db";
 
+    public static void Initialize()
+    {
+        using (var connection = new SqliteConnection(ConnectionString))
+        {
+            connection.Open();
+            var command  = connection.CreateCommand();
+            command.CommandText = @"
+                CREATE TABLE IF NOT EXISTS Orders (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    CustomerName TEXT,
+                    ProductName TEXT,
+                    Quantity INTEGER,
+                    UnitPrice DECIMAL
+                );";
+            command.ExecuteNonQuery();
+        }
+    }
 
     public static int ExecuteNonQueryUnsafe(string sql)
     {
-        var conn = new SqlConnection(ConnectionString);
-        var cmd = new SqlCommand(sql, conn);
-        conn.Open();
-        return cmd.ExecuteNonQuery();
+        using (var conn = new SqliteConnection(ConnectionString))
+        {
+            conn.Open();
+            var cmd = new SqliteCommand(sql, conn);
+            return cmd.ExecuteNonQuery();
+        }
     }
 
     public static IDataReader ExecuteReaderUnsafe(string sql)
     {
-        var conn = new SqlConnection(ConnectionString);
-        var cmd = new SqlCommand(sql, conn);
+        var conn = new SqliteConnection(ConnectionString);
         conn.Open();
-        return cmd.ExecuteReader();
+        var cmd = new SqliteCommand(sql, conn);
+        return cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
     }
 }
