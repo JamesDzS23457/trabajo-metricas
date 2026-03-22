@@ -7,7 +7,7 @@ namespace Infrastructure.Data;
 
 public static class BadDb
 {
-    public static string ConnectionString = "Data Source=Tienda.db";
+    public const string ConnectionString = "Data Source=Tienda.db";
 
     public static void Initialize()
     {
