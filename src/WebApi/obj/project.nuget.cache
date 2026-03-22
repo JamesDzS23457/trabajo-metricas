@@ -1,20 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "OcOHGuakq1Y=",
-  "success": false,
+  "dgSpecHash": "XyiCKxGpTqY=",
+  "success": true,
   "projectFilePath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\WebApi\\WebApi.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Cycle detected. \r\n  WebApi -> Application -> WebApi.",
-      "projectPath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\WebApi\\WebApi.csproj",
-      "filePath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\WebApi\\WebApi.csproj",
-      "libraryId": "WebApi",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\amaya\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\amaya\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\amaya\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\amaya\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\amaya\\.nuget\\packages\\system.data.sqlclient\\4.9.1\\system.data.sqlclient.4.9.1.nupkg.sha512"
+  ],
+  "logs": []
 }

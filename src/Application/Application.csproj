@@ -4,10 +4,9 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
 
   <!-- BAD: Application knows about Web layer and Infrastructure (more violations) -->
-  <ItemGroup>
-    <ProjectReference Include="..\WebApi\WebApi.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-  </ItemGroup>
 </Project>

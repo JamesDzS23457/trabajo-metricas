@@ -1,20 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A+JbX+zNebQ=",
-  "success": false,
+  "dgSpecHash": "a/t5ss1Rrpk=",
+  "success": true,
   "projectFilePath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1108",
-      "level": "Error",
-      "message": "Cycle detected. \r\n  Application -> WebApi -> Application.",
-      "projectPath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\Application\\Application.csproj",
-      "filePath": "C:\\Users\\amaya\\Downloads\\ARQ_lim\\ARQ_lim\\src\\Application\\Application.csproj",
-      "libraryId": "Application",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

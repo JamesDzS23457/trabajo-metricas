@@ -2,3 +2,11 @@ C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.Gene
 C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\amaya\Downloads\ARQ_lim\ARQ_lim\src\Domain\obj\Debug\net8.0\ref\Domain.dll
