@@ -37,8 +37,7 @@ app.MapPost("/orders", (HttpContext http) =>
     var qty = parts.Length > 2 ? int.Parse(parts[2]) : 1;
     var price = parts.Length > 3 ? decimal.Parse(parts[3]) : 0.99m;
 
-    var uc = new CreateOrderUseCase();
-    var order = uc.Execute(customer, product, qty, price);
+    var order = CreateOrderUseCase.Execute(customer, product, qty, price);
     var sql = $"INSERT INTO Orders (CustomerName, ProductName, Quantity, UnitPrice) VALUES ('{customer}', '{product}', {order.Quantity}, {order.UnitPrice.ToString(System.Globalization.CultureInfo.InvariantCulture)})";
     
     BadDb.ExecuteNonQueryUnsafe(sql);
