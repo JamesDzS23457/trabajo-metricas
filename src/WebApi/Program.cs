@@ -1,6 +1,7 @@
 using Infrastructure.Data;
 using Infrastructure.Logging;
 using Application.UseCases;
+using System.Security.Cryptography;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +23,9 @@ app.Use(async (ctx, next) =>
 app.MapGet("/health", () =>
 {
     Logger.Log("health ping");
-    var x = new Random().Next();
-    if (x % 13 == 0) throw new Exception("random failure"); // flaky!
+    var x = RandomNumberGenerator.GetInt32(int.MaxValue);
+    
+    if (x % 13 == 0) throw new InvalidOperationException("random failure"); // flaky!
     return "ok " + x;
 });
 
@@ -54,4 +56,4 @@ app.MapGet("/info", (IConfiguration cfg) => new
     version = "v0.0.1-unsecure"
 });
 
-app.Run();
+await app.RunAsync();
