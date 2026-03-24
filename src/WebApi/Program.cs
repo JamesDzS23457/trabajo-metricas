@@ -5,6 +5,9 @@ using System.Security.Cryptography;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 builder.Logging.ClearProviders();
 
 builder.Services.AddCors(options =>
@@ -18,6 +21,11 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 BadDb.Initialize();
 
