@@ -1,5 +1,7 @@
 
 
+using System;
+
 namespace Domain.Entities;
 
 public class Order
@@ -13,5 +15,6 @@ public class Order
     public void CalculateTotalAndLog()
     {
         var total = Quantity * UnitPrice; 
+        Console.WriteLine($"Total Calculado: {total}");
     }
 }
