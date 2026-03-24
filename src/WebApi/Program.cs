@@ -7,13 +7,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.ClearProviders();
 
-builder.Services.AddCors(o => o.AddPolicy("bad", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000", "https://localhost:7001", "http://localhost:5000") // Agrega aquí las URLs de los clientes que usarás
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
 BadDb.Initialize();
 
-app.UseCors("bad");
+app.UseCors("AllowLocalhost");
 
 app.Use(async (ctx, next) =>
 {
