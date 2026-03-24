@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Domain.Entities;
 
 namespace Domain.Services;
@@ -12,7 +12,7 @@ public static class OrderService
     {
         var o = new Order
         {
-            Id = new Random().Next(1, 9999999), 
+            Id = RandomNumberGenerator.GetInt32(1, 9999999), 
             CustomerName = customer, 
             ProductName = product, 
             Quantity = qty, 
